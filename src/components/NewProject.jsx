@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Input from "./Input.jsx";
 import Modal from "./Modal.jsx";
 
-export default function NewProject({ handleAddProject }) {
+export default function NewProject({ handleAddProject  ,handleCancelAddProject }) {
 
     const modal = useRef();
 
@@ -33,13 +33,14 @@ export default function NewProject({ handleAddProject }) {
     return (
         <>
         <Modal ref={modal} buttonCaption="Okay">
-            <h2> Invalid Input </h2>
-            <p>enter right Value</p>
+            <h2 className="text-xl font-bold text-stone-700 my-4"> Invalid Input </h2>
+            <p className="text-stone-600 mb-4">enter right Value</p>
         </Modal>
             <div className="w-[35rem] mt-16">
                 <menu className="flex item-center justify-end gap-4 my-4">
                     <li>
-                        <button className="px-6 py-2 text-stone-800  hover:text-stone-950">
+                        <button className="px-6 py-2 text-stone-800  hover:text-stone-950"
+                        onClick={handleCancelAddProject}>
                             Cancel
                         </button>
                     </li>
