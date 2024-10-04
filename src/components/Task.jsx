@@ -1,7 +1,7 @@
 import { useState } from "react";
 import NewTask from "./NewTask";
 
-export default function Taks({tasks, handleAddTask , handleDeleteTask ,parentTaskId }){
+export default function Tasks({tasks, handleAddTask , handleDeleteTask ,parentTaskId }){
 
     const relevantTasks = tasks.filter(task => task.parentId === parentTaskId);
      return(
