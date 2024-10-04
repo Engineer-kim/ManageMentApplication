@@ -22,7 +22,8 @@ export default function SelectedProject({selectProject , handleDeleteProject, ha
                     <p className="mb-4 text-stone-400">{formatDate}</p>
                     <p className="text-stone-600 whitespace-pre-wrap">{selectProject.description}</p>
                 </header>
-                <Task handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} tasks={tasks}/>
+                <Task handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} tasks={tasks}
+                 parentTaskId={selectProject.id}/>
             </div>
         </>
     )
