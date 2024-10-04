@@ -1,6 +1,7 @@
 import Button from "./Button";
+import Task from "./Task";
 
-export default function SelectedProject({selectProject , handleDeleteProject}) {
+export default function SelectedProject({selectProject , handleDeleteProject, handleAddTask ,handleDeleteTask , tasks}) {
 
     const formatDate = new Date(selectProject.dueDate).toLocaleDateString('en-US', {
         year: 'numeric',
@@ -21,7 +22,7 @@ export default function SelectedProject({selectProject , handleDeleteProject}) {
                     <p className="mb-4 text-stone-400">{formatDate}</p>
                     <p className="text-stone-600 whitespace-pre-wrap">{selectProject.description}</p>
                 </header>
-                TASKS
+                <Task handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} tasks={tasks}/>
             </div>
         </>
     )
