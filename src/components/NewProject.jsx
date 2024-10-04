@@ -8,13 +8,13 @@ export default function NewProject({handleAddProject}) {
 
     function handleSave() {
         const ennteredTitle = title.current.value;
-        const ennteredDescription = desctription.current.value
-        const ennteredDueDate = dueDate.current.value
+        const enteredDescription = desctription.current.value
+        const enteredDueDate = dueDate.current.value
     
         handleAddProject({
             title: ennteredTitle,
-            desctription: ennteredDescription,
-            dueDate: ennteredDueDate
+            desctription: enteredDescription,
+            dueDate: enteredDueDate
         });
     }
 
@@ -34,9 +34,9 @@ export default function NewProject({handleAddProject}) {
                 </li>
             </menu>
             <div>
-               <Input ref={title} label="Title"/>
+               <Input type="text" ref={title} label="Title"/>
                <Input ref={desctription} label="Desctription" textarea/>
-               <Input ref={dueDate} label="Due Date"/>
+               <Input type="date" ref={dueDate} label="Due Date"/>
             </div>
         </div>
     )
